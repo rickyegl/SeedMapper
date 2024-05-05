@@ -45,6 +45,7 @@ import java.util.stream.StreamSupport;
 
 import static com.mojang.brigadier.arguments.IntegerArgumentType.getInteger;
 import static com.mojang.brigadier.arguments.IntegerArgumentType.integer;
+import static dev.xpple.seedmapper.SeedMapper.CLIENT;
 import static dev.xpple.seedmapper.command.arguments.BiomeArgumentType.biome;
 import static dev.xpple.seedmapper.command.arguments.BiomeArgumentType.getBiome;
 import static dev.xpple.seedmapper.command.arguments.DecoratorFactoryArgumentType.decoratorFactory;
@@ -398,6 +399,10 @@ public class LocateCommand extends ClientCommand implements SharedHelpers.Except
                     continue;
                 }
                 itemsFound += matchedItems;
+
+                //((ILoot) structure).lol();
+                //CLIENT.inGameHud.getChatHud().addMessage(Text.literal(chest.toString()));
+                CLIENT.inGameHud.getChatHud().addMessage(Text.literal(String.valueOf(matchedItems)+" "+structure.getName()));
                 positions.add(cPos.toBlockPos().add(9, 0, 9));
                 if (itemsFound >= amount) {
                     return positions;
@@ -407,4 +412,10 @@ public class LocateCommand extends ClientCommand implements SharedHelpers.Except
         }
         return null;
     }
+
+
+
+
+
+
 }
