@@ -1,4 +1,4 @@
-Always use the latest (stable) version!
+Personal QOL improvements for seed analyzer
 # SeedMapper
 In-game Minecraft Fabric mod that allows you to do various things with the world seed. For reference, have a look at the 
 [features](#features) this mod has. Keep in mind though, this mod requires you to have access to the seed. If the seed 
